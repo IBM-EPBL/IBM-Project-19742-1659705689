@@ -1,0 +1,37 @@
+<head>
+<style>
+body {
+  background-image: url('static/failure.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+pre{
+
+position: absolute;
+top: 5px;
+
+left: 900px;
+font-size: 40px;
+}
+p{
+
+  position: absolute;
+  top: 50px;
+ 
+  left: 1100px;
+font-size: 40px;
+}
+
+</style>
+</head>
+<body>
+<pre>The Percentage is</pre>
+<p id="failure"></p>
+<script>  
+let x = '{{prediction_text}}';
+document.getElementById("failure").innerHTML = x;
+</script>
+</body>
+</html>
+

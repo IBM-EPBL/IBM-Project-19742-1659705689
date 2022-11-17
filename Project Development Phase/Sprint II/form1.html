@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" href='static/style.css'>
+</head>
+<body>
+  <form action="/predict" method="post">
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome To UAEP</h2>
+      <h4 class="animation a2">Enter the necessary details for accurate university admit eligibility predictions</h4>
+       </div>
+        <label>GRE SCORE </label>
+        <input type="number" class="form-field" max="340" min="0" name="gre" required><br><br>
+        <label>TOEFL SCORE </label>
+        <input type="number" class="form-field" max="120" min="0" name="ielts" required><br><br>
+        <label>SOP SCORE </label>
+        <input type="number" class="form-field"   max="5" min="0" name="sop" required><br><br>
+        <label>LOR SCORE </label>
+        <input type="number"  class="form-field"  max="5" min="0" name="lor" required><br><br>
+        <label>CGPA </label>
+        <input type="number" class="form-field"  max="10" min="0" name="cgpa" required><br><br>
+        <label>RESEARCH PAPER </label>
+        <input type="number" class="form-field" min="0" name="research paper" required><br><br>
+        <label>UNIVERSITY RANK </label>
+        <input type="number" class="form-field" max="50" min="1" name="university rank" required maxlength='5'>
+    <button class="animation a6">Predict</button>         
+  </div>
+  <div class="right"></div>
+</div>
+</form>
+</body>
+</html>
