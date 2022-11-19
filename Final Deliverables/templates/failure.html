@@ -1,0 +1,101 @@
+<html>
+  <head>
+<style>
+body {
+  background-image: url('static/failure.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+pre{
+
+position: absolute;
+bottom: 210px;
+
+left: 30px;
+font-size: 90px;
+}
+p{
+
+  position: absolute;
+  bottom: 200px;
+  color:#154ba8;
+  left: 300px;
+font-size: 40px;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 400px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 400px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;}
+</style>
+</head>
+<body>
+  <button class="open-button" onclick="openForm()">VIEW RESULTS</button>
+
+  <div class="form-popup" id="myForm">
+    <form class="form-container">
+      <h1>Your Percentage is</h1>
+  
+      <label><b id="failure"></b></label>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  
+  <script>
+  let x= '{{prediction_text}}';
+  document.getElementById("failure").innerHTML = x;
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+</body>
+</html>
+
